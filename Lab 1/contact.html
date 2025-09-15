@@ -91,13 +91,13 @@
 			<fieldset>
 				<legend>Personal Information</legend>
 				<label for="fname">First name:</label><br>
-				<input type="text" id="fname" name="fname"><br>
+				<input type="text" id="fname" name="fname" required><br>
 				<label for="lname">Last name:</label><br>
-				<input type="text" id="lname" name="lname"><br>
+				<input type="text" id="lname" name="lname" required><br>
 				<label for="email">Email:</label><br>
-				<input type="email" id="email" name="email"><br>
+				<input type="email" id="email" name="email" required><br>
 				<label for="age">Age:</label><br>
-				<input type="number" id="age" name="age" min="13" max="100"><br>
+				<input type="number" id="age" name="age" min="13" max="100" required><br>
 				<label for="education">Education:</label><br>
 				<select id="education-levels" name="education-levels">
 					<option value="unfinished-secondary">Unfinished Secondary</option>
@@ -132,7 +132,7 @@
 				<label for="details">Details:</label>
 				<textarea id="details" name="details" rows="5" cols="40" maxlength="500"></textarea>
 			</fieldset>
-			<input type="checkbox" id="agreement" name="agreement">
+			<input type="checkbox" id="agreement" name="agreement" required>
 			<label for="agreement">I agree to the <a href="https://policies.google.com/privacy?hl=en-US">Privacy
 					Policy</a></label>
 			<br><br>
