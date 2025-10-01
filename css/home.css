@@ -263,6 +263,11 @@ iframe {
 		height: 20vh;
 	}
 
+	#big-logo{
+		transform: scale(1.6);
+		height: 20vh;
+	}
+
 	#small-logo{
 		transform: scale(0.6);
 	}
