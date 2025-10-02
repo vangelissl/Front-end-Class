@@ -11,7 +11,7 @@ img:hover {
 }
 
 main article {
-	transform-origin: top left;
+	transform-origin: center center;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -21,7 +21,11 @@ main article {
 	border-width: medium;
 	border-radius: 1rem;
 	border-color: hsl(240, 100%, 30%);
-	height: 600px;
+	width: auto;
+	max-width: 90%;
+	margin: 0;
+	height: 70vh;
+	padding: 2rem;
 }
 
 ol {
@@ -35,36 +39,36 @@ ol {
 }
 
 img {
-	width: 25vw;
+	width: 60%;
 	height: auto;
 	border-style: solid;
-	border-color:hsl(38, 45%, 59%);
+	border-color: hsl(38, 45%, 59%);
 	transition: all 1s ease;
 }
 
 .container {
-    display: flex;
-    flex-direction: row;
+	display: flex;
+	flex-direction: row;
 }
 
 aside {
-    position: sticky;
-    top: 2.5em; 
-    left: 0;
-    width: 20%; 
+	position: sticky;
+	top: 2.5em;
+	left: 0;
+	width: 20%;
 	height: max-content;
-    overflow-y: auto; 
-    border-right: 1px solid black;
-    border-bottom: 1px solid black;
-    z-index: 0;
-    box-sizing: border-box; 
+	overflow-y: auto;
+	border-right: 1px solid black;
+	border-bottom: 1px solid black;
+	z-index: 0;
+	box-sizing: border-box;
 }
 
 main {
-    flex: 1; 
-    margin: 2rem;
+	flex: 1;
+	margin: 2rem;
 	margin-top: 3rem;
-    box-sizing: border-box;
+	box-sizing: border-box;
 }
 
 footer {
@@ -75,10 +79,87 @@ footer {
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
 	gap: 2rem;
+	padding-left: 0;
 }
 
-.project-list-container li{
+.project-list-container>li {
+	display: grid;
+	place-items: center;
 	padding: 0;
 	margin: 0;
 }
 
+@media (max-width: 1000px) {
+	main {
+		margin: 0;
+		width: 100%;
+	}
+
+	aside {
+		font-size: 60%;
+	}
+
+	#side-nav {
+		padding-left: 0;
+	}
+
+	.project-list-container {
+		grid-template-columns: 1fr;
+		gap: 0;
+		padding: 0;
+		margin-bottom: 4rem;
+	}
+
+	main {
+		margin-left: 0;
+	}
+
+	aside {
+		flex: 1;
+	}
+
+	.project-list-container>li {
+		max-height: 60vh;
+	}
+
+	main article {
+		transform: scale(0.7);
+		width: 70vw;
+		max-height: 80%;
+	}
+
+	img {
+		max-width: 45%;
+	}
+}
+
+@media (max-width: 700px){
+	aside {
+		display: none;
+	}
+
+	#small-logo {
+		max-width: 15vw;
+	}
+}
+
+@media (max-width: 600px) {
+	main article {
+		height: 70vh;
+	}
+
+	img {
+		width: 30vh;
+	}
+}
+
+@media (max-width: 400px) {
+	main ol {
+		width: 100%;
+	}
+
+	main article {
+		max-width: 90vw;
+		transform: scale(0.85);
+	}
+}
