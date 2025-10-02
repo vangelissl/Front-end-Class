@@ -11,13 +11,12 @@ form {
 	font-family: 'Euclid Circular A', sans-serif;
 	color: rgb(119, 119, 119);
 	width: 40%;
+	height: max-content;
 	border-radius: 15px;
 	border: 0.1rem solid rgba(0, 0, 0, 0.663);
 	background-color: #f2f2f2;
 	padding: 20px;
 	margin-bottom: 5rem;
-	height: 80vh;
-	overflow-y: auto;
 }
 
 fieldset {
@@ -108,4 +107,12 @@ label[for="email"],
 label[for="age"],
 #age {
 	grid-column-start: 4;
+}
+
+@media (max-width: 1000px) {
+	form {
+		width: 80%;
+	}
+
+	form>* {}
 }
